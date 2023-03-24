@@ -1,16 +1,16 @@
 ### <p align="center">FishDreamer: Towards Fisheye Semantic Completion via Unified Image Outpainting and Segmentation
 <br>
 <div align="center">
-  <a href="https://www.researchgate.net/profile/Shi-Hao-10" target="_blank">Hao&nbsp;Shi</a> &emsp; <b>&middot;</b> &emsp;
-  Yu&nbsp;Li</a> &emsp; <b>&middot;</b> &emsp;
-  <a href="https://www.researchgate.net/profile/Kailun-Yang" target="_blank">Kailun&nbsp;Yang</a> &emsp; <b>&middot;</b> &emsp;
-  <a href="https://www.researchgate.net/profile/Jiaming-Zhang-10" target="_blank">Jiaming&nbsp;Zhang</a> &emsp; <b>&middot;</b> &emsp;
+  <a href="https://www.researchgate.net/profile/Shi-Hao-10" target="_blank">Hao&nbsp;Shi</a> <b>&middot;</b>
+  Yu&nbsp;Li</a> <b>&middot;</b> &emsp;
+  <a href="https://www.researchgate.net/profile/Kailun-Yang" target="_blank">Kailun&nbsp;Yang</a> <b>&middot;</b> &emsp;
+  <a href="https://www.researchgate.net/profile/Jiaming-Zhang-10" target="_blank">Jiaming&nbsp;Zhang</a> <b>&middot;</b> &emsp;
   <a href="https://www.researchgate.net/profile/Kunyu-Peng" target="_blank">Kunyu&nbsp;Peng</a> <b>&middot;</b>
   <a href="https://www.researchgate.net/profile/Alina-Roitberg-2" target="_blank">Alina&nbsp;Roitberg</a> <b>&middot;</b>
   <a href="https://www.researchgate.net/profile/Yaozu-Ye" target="_blank">Yaozu&nbsp;Ye</a> <b>&middot;</b>
   Huajian&nbsp;Ni</a> <b>&middot;</b>
   <a href="https://www.researchgate.net/profile/Kaiwei-Wang-4" target="_blank">Kaiwei&nbsp;Wang</a> <b>&middot;</b>
-  <a href="https://www.researchgate.net/profile/Rainer-Stiefelhagen" target="_blank">Rainer&nbsp;Stiefelhagen</a> <b>&middot;</b>
+  <a href="https://www.researchgate.net/profile/Rainer-Stiefelhagen" target="_blank">Rainer&nbsp;Stiefelhagen</a>
   <br> <br>
 
 [comment]: <> (  <a href="https://arxiv.org/pdf/2211.11293.pdf" target="_blank">Paper</a>)
