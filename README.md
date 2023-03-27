@@ -13,11 +13,9 @@
   <a href="https://www.researchgate.net/profile/Rainer-Stiefelhagen" target="_blank">Rainer&nbsp;Stiefelhagen</a>
   <br> <br>
 
-[comment]: <> (  <a href="https://arxiv.org/pdf/2211.11293.pdf" target="_blank">Paper</a>)
+  <a href="https://arxiv.org/pdf/2303.13842.pdf" target="_blank">Paper</a>
 
 ####
-
-[comment]: <> (<a href="https://arxiv.org/" target="_blank">Paper</a> &emsp;)
 
 [comment]: <> (  <a href="https://arxiv.org/" target="_blank">Demo Video &#40;Youtube&#41;</a> &emsp;)
 
