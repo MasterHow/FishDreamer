@@ -32,6 +32,11 @@
 
 [comment]: <> (- 2022.11.21 Release the [arXiv]&#40;https://arxiv.org/abs/2211.11293&#41; version with supplementary materials.)
 
+### Update
+- 2023.03.20 Init repository.
+- 2023.03.24 Release the [arXiv](https://arxiv.org/abs/2303.13842) version.
+- 2023.04.05 :rocket: FishDreamer has been accepted to CVPRW23 (CVPR Workshop OmniCV2023).
+
 ### TODO List
 - [ ] Code release. 
 - [ ] CityScape-BF & KITTI360-BF release. (Generative code maybe.)
