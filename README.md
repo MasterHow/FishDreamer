@@ -35,7 +35,7 @@
 ### Update
 - 2023.03.20 Init repository.
 - 2023.03.24 Release the [arXiv](https://arxiv.org/abs/2303.13842) version.
-- 2023.04.05 :rocket: FishDreamer has been accepted to CVPRW23 (CVPR Workshop OmniCV2023).
+- 2023.04.05 :rocket: FishDreamer has been accepted to 2023 IEEE/CVF Conference on Computer Vision and Pattern Recognition Workshops (CVPRW OmniCV2023).
 
 ### TODO List
 - [ ] Code release. 
