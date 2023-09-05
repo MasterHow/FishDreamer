@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="7f872e56-5f18-4dee-ad01-3c885b524f02" name="闪马-FishDreamer">
+        <fileTransfer accessType="SFTP" host="ssh.atom.ks.supremind.info" port="40216" sshConfigId="faa8e3b8-5c1f-4a97-9d0e-e3e18b4ff91f" sshConfig="闪马工作台" keyPair="true" />
+      </webServer>
+    </option>
+  </component>
+</project>

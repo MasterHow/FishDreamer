@@ -1,0 +1,9 @@
+# @package _group_
+generator:
+  kind: sgd
+  lr: 0.001
+  weight_decay: 0.1
+discriminator:
+  kind: sgd
+  lr: 0.001
+  weight_decay: 0.1

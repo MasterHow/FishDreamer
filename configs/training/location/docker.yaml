@@ -1,0 +1,5 @@
+# @package _group_
+data_root_dir: /workspace/mnt/storage/shihao/FishEX/cityscapes_bf/
+out_root_dir: /workspace/mnt/storage/shihao/shihao-cephs/Fish_out/city/out/
+tb_dir: /workspace/mnt/storage/shihao/shihao-cephs/Fish_out/city/logs/
+pretrained_models: /some_path

@@ -1,0 +1,6 @@
+# @package _group_
+kind: fpn
+
+in_channels: [96, 192, 384, 768]
+
+

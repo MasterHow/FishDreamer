@@ -1,0 +1,40 @@
+run_title: ''
+
+training_model:
+  kind: default
+  visualize_each_iters: 10000000
+  concat_mask: true
+  store_discr_outputs_for_vis: true
+losses:
+  l1:
+    weight_missing: 0
+    weight_known: 20
+  perceptual:
+    weight: 0
+  adversarial:
+    kind: r1
+    weight: 20
+    gp_coef: 0.001
+    mask_as_fake_target: true
+    allow_scale_mask: true
+  feature_matching:
+    weight: 200
+  resnet_pl:
+    weight: 60
+    weights_path: ${env:TORCH_HOME}
+  cross_entropy:
+    weight: 30
+  lovasz_loss:
+    weight: 10
+
+
+defaults:
+  - location: docker
+  - data: abl-04-256-mh-dist
+  - encoder_decoder: fishdreamer_small
+  - discriminator: pix2pixhd_nlayer
+  - optimizers: adamW-lr2_5e-4
+  - visualizer: directory
+  - evaluator: default_inpainted
+  - trainer: default_sampler
+  - hydra: overrides
