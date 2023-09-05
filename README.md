@@ -16,30 +16,17 @@
   <a href="https://arxiv.org/pdf/2303.13842.pdf" target="_blank">Paper</a>
 
 ####
-
-[comment]: <> (  <a href="https://arxiv.org/" target="_blank">Demo Video &#40;Youtube&#41;</a> &emsp;)
-
-[comment]: <> (  <a href="https://arxiv.org/" target="_blank">演示视频 &#40;B站&#41;</a> &emsp;)
 </div>
-<br>
-<p align="center">:hammer_and_wrench: :construction_worker: :rocket:</p>
-<p align="center">:fire: We will release code and checkpoints in the future. :fire:</p>
 <br>
 
 <div align=center><img src="assets/teaser.png" width="661" height="777" /></div>
 
-[comment]: <> (### Update)
-
-[comment]: <> (- 2022.11.21 Release the [arXiv]&#40;https://arxiv.org/abs/2211.11293&#41; version with supplementary materials.)
 
 ### Update
 - 2023.03.20 Init repository.
 - 2023.03.24 Release the [arXiv](https://arxiv.org/abs/2303.13842) version.
 - 2023.04.05 :rocket: FishDreamer has been accepted to 2023 IEEE/CVF Conference on Computer Vision and Pattern Recognition Workshops (CVPRW OmniCV2023).
-
-### TODO List
-- [ ] Code release. 
-- [ ] CityScape-BF & KITTI360-BF release. (Generative code maybe.)
+- 2023.09.05 Release code.
 
 ### Abstract
 This paper raises the new task of Fisheye Semantic Completion (FSC), where dense texture, structure, and semantics of a fisheye image are inferred even beyond the sensor field-of-view (FoV).
@@ -62,25 +49,79 @@ In addition to the contribution of the novel task and architecture, we also deri
 ## Results
 <div align=center><img src="assets/compare.png" width="800" height="416" /></div>
 
-[comment]: <> (### Citation)
+After code reorganization, we retrained FishDreamer on Cityscapes-BF:
 
-[comment]: <> (   If you find our paper or repo useful, please consider citing our paper:)
+| Method     | PSNR | mIoU |
+| :--------- | :----------: | :------------: |
+| _FishDreamer (Paper)_ | _25.05_ | _54.54_ |
+| FishDreamer (This Repo) | **25.21** | **54.88** |
 
-[comment]: <> (   ```bibtex)
+### Dependencies
+This repo has been tested in the following environment:
+```angular2html
+torch == 1.9.0
+pytorch-lightning == 1.8.6
+mmcv-full == 1.5.2
+```
+### Usage
+To train FishDreamer, first set environment variable:
+```angular2html
+export USER=$(whoami)
+export TORCH_HOME=$(pwd) && export PYTHONPATH=$(pwd)
+```
+Then start training:
+```angular2html
+python3 bin/train.py \
+-cn FishDreamer \
+data.batch_size=3 \
+trainer.kwargs.max_epochs=70 \
+data.train.transform_variant=resize
+```
 
-[comment]: <> (   @article{shi2022flowlens,)
+To output visual result, run:
+```angular2html
+python3 bin/predict.py \
+model.path=$ModelPath \
+indir=$DataPath \
+outdir=$OutPath
+```
+You can eval your result by:
+```angular2html
+python3 bin/evaluate_predicts.py \
+config=$ConfigPath \
+datadir=$DataPath \
+predictdir=$OutPath \
+outpath=$OutMetricPath
+```
 
-[comment]: <> (  title={FlowLens: Seeing Beyond the FoV via Flow-guided Clip-Recurrent Transformer},)
+### Pretrained Models & Dataset
+The pretrained model and Cityscapes-BF dataset can be found there:
+```angular2html
+https://share.weiyun.com/7ShuPa2Y
+```
+For KITTI360-BF, please follow the instruction of [FisheyeEX](https://arxiv.org/pdf/2206.05844.pdf).
 
-[comment]: <> (  author={Shi, Hao and Jiang, Qi and Yang, Kailun and Yin, Xiaoting and Wang, Kaiwei},)
+### Citation
 
-[comment]: <> (  journal={arXiv preprint arXiv:2211.11293},)
+   If you find our paper or repo useful, please consider citing our paper:
 
-[comment]: <> (  year={2022})
+   ```bibtex
+@inproceedings{shi2023fishdreamer,
+  title={FishDreamer: Towards Fisheye Semantic Completion via Unified Image Outpainting and Segmentation},
+  author={Shi, Hao and Li, Yu and Yang, Kailun and Zhang, Jiaming and Peng, Kunyu and Roitberg, Alina and Ye, Yaozu and Ni, Huajian and Wang, Kaiwei and Stiefelhagen, Rainer},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={6433--6443},
+  year={2023}
+}
+   ```
 
-[comment]: <> (})
+### Acknowledgement
+This project would not have been possible without the following outstanding repositories:
 
-[comment]: <> (   ```)
+[LaMa](https://github.com/advimman/lama), [MMSegmentation](https://github.com/open-mmlab/mmsegmentation)
+
+### Devs
+Hao Shi, Yu Li
 
 ### Contact
 Feel free to contact me if you have additional questions or have interests in collaboration. Please drop me an email at haoshi@zju.edu.cn. =)

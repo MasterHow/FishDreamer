@@ -1,0 +1,23 @@
+#kind:swin
+#DATA:
+#  IMG_SIZE: 512
+#MODEL:
+#  TYPE: swin
+#  NAME: swin_tiny_c24_patch4_window8_256
+#  DROP_PATH_RATE: 0.2
+#  SWIN:
+#    EMBED_DIM: 96
+#    DEPTHS: [ 2, 2, 6, 2 ]
+#    NUM_HEADS: [ 4, 8, 16, 32 ]
+#    WINDOW_SIZE: 8
+
+kind: swin
+
+pretrain_img_size: 512
+embed_dim: 96
+depths: [ 2, 2, 6, 2 ]
+num_heads: [ 3, 6, 12, 24]
+window_size: 7
+drop_path_rate: 0.3
+patch_norm: True
+use_checkpoint: False

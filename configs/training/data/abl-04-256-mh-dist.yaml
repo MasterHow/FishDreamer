@@ -1,0 +1,43 @@
+# @package _group_
+
+batch_size: 8
+val_batch_size: 2
+num_workers: 8
+
+train:
+  indir: ${location.data_root_dir}/train
+  out_size: 512
+  mask_gen_kwargs:  # probabilities do not need to sum to 1, they are re-normalized in mask generator
+    irregular_proba: 1
+    irregular_kwargs:
+      max_angle: 4
+      max_len: 200
+      max_width: 100
+      max_times: 5
+      min_times: 1
+
+    box_proba: 0
+    segm_proba: 0
+
+  transform_variant: no_augs
+  dataloader_kwargs:
+    batch_size: ${data.batch_size}
+    shuffle: True
+    num_workers: ${data.num_workers}
+
+val:
+  indir: ${location.data_root_dir}/val
+  img_suffix: .png
+  dataloader_kwargs:
+    batch_size: ${data.val_batch_size}
+    shuffle: False
+    num_workers: ${data.num_workers}
+
+visual_test:
+  indir: ${location.data_root_dir}/test
+  img_suffix: .png
+  pad_out_to_modulo: 32
+  dataloader_kwargs:
+    batch_size: 1
+    shuffle: False
+    num_workers: ${data.num_workers}

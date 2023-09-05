@@ -1,0 +1,7 @@
+# @package _group_
+kind: upernet_outpainting
+
+in_channels: [96, 192, 384, 768]
+in_index: [0, 1, 2, 3]
+channels: 512
+num_classes: 3

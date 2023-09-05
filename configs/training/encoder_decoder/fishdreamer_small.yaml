@@ -1,0 +1,38 @@
+
+kind: swin_upernet
+pretrained: '/workspace/mnt/storage/shihao/shihao-cephs/SemanticFishExtra/models/pretrained_backbones/swin_small_patch4_window7_224_22k.pth'
+bi_direction_head: True
+
+encoder:
+  embed_dim: 96
+  depths: [2, 2, 18, 2]
+  num_heads: [3, 6, 12, 24]
+  window_size: 7
+  ape: False
+  drop_path_rate: 0.3
+  patch_norm: True
+  use_checkpoint: False
+
+bi_head_settings:
+  in_index: [0, 1, 2, 3]
+  align_corners: False
+  n_downsampling: 3
+  in_nc: 1440       # tiny small    for out-painting head channels
+#  in_nc: 1920         # base
+#  in_nc: 2880         # large
+  inter_nc: 1024   # for out-painting head channels (hidden dimension)
+  out_nc: 3
+  max_features: 2048
+  ngf: 128      # 64 for default = inter_nc 512
+  polar_mask: True
+  in_channels: [96, 192, 384, 768]     # tiny small   for semantics head channels
+#  in_channels: [128, 256, 512, 1024]       # base
+#  in_channels: [192, 384, 768, 1536]       # large
+  channels: 384     # for semantics head channels (hidden dimension)
+
+
+# the following args are used to inplace
+
+outpainting_head: {}
+
+segmentation_head: {}
